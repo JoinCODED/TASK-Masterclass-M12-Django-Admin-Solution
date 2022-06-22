@@ -27,6 +27,9 @@ urlpatterns: URLPatterns = [
     path("admin/", admin.site.urls),
 ]
 
+# Change admin site headers here
+
+
 if settings.DEBUG:
     urlpatterns += static(
         settings.STATIC_URL, document_root=settings.STATIC_ROOT
