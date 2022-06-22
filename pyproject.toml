@@ -82,7 +82,6 @@ disable = '''
   no-member,
   raise-missing-from,
   no-self-argument,
-  no-self-use,
   fixme,
   unsubscriptable-object,
   unused-argument,
@@ -93,9 +92,7 @@ disable = '''
   import-outside-toplevel,
   too-many-ancestors,
   cyclic-import,
-  # handled by black
   format,
-  # handled by isort
   wrong-import-order,
   ungrouped-imports
 '''
