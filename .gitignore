@@ -28,6 +28,8 @@ Temporary Items
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+.mypy_cache/
+.pytest_cache/
 
 # C extensions
 *.so
@@ -81,9 +83,6 @@ target/
 ### Django ###
 *.log
 *.pot
-*.pyc
-__pycache__/
-local_settings.py
 
 .env
 .venv
