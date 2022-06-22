@@ -71,3 +71,9 @@ Make the custom list display for `graduated` show a checkmark/cross icon instead
 
 1. Add a filter in the `sensei` list view for the `cohort`.
 2. Add a filter in the `ninja` list view for whether or not they graduated.
+
+## Inlining Models
+
+[This](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#inlinemodeladmin-objects) link is your new best friend.
+
+Inline `Cohort` in the `Academy` edit view. So if an admin goes to the `Academy` edit view, they should be able to create cohorts on the spot.
