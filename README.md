@@ -30,7 +30,7 @@ Use [this](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/) to your adv
 ### Village List View
 
 1. Display both the `id` and `name` in the list page.
-2. Add a custom list display view that shows the current number of ninjas.
+2. Add a custom list display that shows the current number of ninjas.
    - Use [this](https://docs.djangoproject.com/en/4.0/ref/models/querysets/#count) to count stuff like a pro
    - The filter should be the cohort that has an end date greater than `timezone.now()`
    - From the active cohorts get the students that have `graduated_at=null` and count this queryset
@@ -39,26 +39,26 @@ Use [this](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/) to your adv
 ### Academy List View
 
 1. Display both the `id` and `founded` in the list page.
-2. Add a custom list display view that shows the village name.
+2. Add a custom list display that shows the village name.
 3. Make both the `id` and `village_name` link to the edit page.
 
 ### Cohort List View
 
 1. Display the `id`, `start_at`, `end_at` in the list page.
-2. Add a custom list display view that shows the count of `senseis` in this cohort.
-3. Add a custom list display view that shows the count of `ninjas` in this cohort.
+2. Add a custom list display that shows the count of `senseis` in this cohort.
+3. Add a custom list display that shows the count of `ninjas` in this cohort.
 4. Make the `id`, `start_at`, and `end_at` link to the edit page.
 
 ### Sensei List View
 
 1. Display the `id` and `name` in the list page.
-2. Add a custom list display view that shows the count of `cohorts` this `sensei` has been in.
+2. Add a custom list display that shows the count of `cohorts` this `sensei` has been in.
 3. Make the `id` and `name` link to the edit page.
 
 ### Ninja List View
 
 1. Display the `id` and `name` in the list page.
-2. Add a custom list display view that shows if the `ninja` graduated or not (displays `True` or `False`).
+2. Add a custom list display that shows if the `ninja` graduated or not (displays `True` or `False`).
 3. Make the `id` and `name` link to the edit page.
 
 #### Ninja List View Bonus
