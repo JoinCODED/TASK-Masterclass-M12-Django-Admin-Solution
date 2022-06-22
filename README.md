@@ -63,4 +63,11 @@ Use [this](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/) to your adv
 
 #### Ninja List View Bonus
 
-Make the custom list display view for `graduated` show a checkmark/cross icon instead of `True/False`.
+Make the custom list display for `graduated` show a checkmark/cross icon instead of `True/False`.
+
+## Filters
+
+[This](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_filter) link is your best friend.
+
+1. Add a filter in the `sensei` list view for the `cohort`.
+2. Add a filter in the `ninja` list view for whether or not they graduated.
