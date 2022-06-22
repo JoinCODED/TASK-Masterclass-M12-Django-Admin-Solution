@@ -77,3 +77,9 @@ Make the custom list display for `graduated` show a checkmark/cross icon instead
 [This](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#inlinemodeladmin-objects) link is your new best friend.
 
 Inline `Cohort` in the `Academy` edit view. So if an admin goes to the `Academy` edit view, they should be able to create cohorts on the spot.
+
+## Actions
+
+[Seems like you have many best friends.](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/actions/)
+
+Add an action that marks all selected `ninjas` to have graduated at `timezone.now()`.
