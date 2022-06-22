@@ -16,6 +16,9 @@ class Academy(models.Model):
     curriculum = models.TextField(default="", blank=True)
     founded = models.DateField()
 
+    class Meta:
+        verbose_name_plural = "Academies"
+
     def __str__(self) -> str:
         return f"{self.village}'s Ninja Academy"
 

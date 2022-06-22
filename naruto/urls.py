@@ -28,7 +28,9 @@ urlpatterns: URLPatterns = [
 ]
 
 # Change admin site headers here
-
+admin.site.index_title = "Welcome to Naruto's Portal"
+admin.site.site_title = "Naruto Admin"
+admin.site.site_header = "Naruto Portal"
 
 if settings.DEBUG:
     urlpatterns += static(
