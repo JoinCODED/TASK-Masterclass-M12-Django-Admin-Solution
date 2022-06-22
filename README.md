@@ -83,3 +83,23 @@ Inline `Cohort` in the `Academy` edit view. So if an admin goes to the `Academy`
 [Seems like you have many best friends.](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/actions/)
 
 Add an action that marks all selected `ninjas` to have graduated at `timezone.now()`.
+
+## Custom Command
+
+We will be creating a custom django command that will mark students to have graduated at `timezone.now()`.
+
+1. Create the file `ninjas/management/commands/graduated.py`.
+2. Create a class called `Command` which inherits from `from django.core.management.base import BaseCommand`.
+3. Add a `help` class variable that describes our command.
+4. Add a method called `add_arguments` which takes in `self` and `parser: argparse.ArgumentParser` and returns nothing.
+   - In that method add an argument called `ninja_ids` to our parser that is of type `int` and `nargs=+`.
+5. Add another method called `handle` which will take in `*args: Any` and `**options: Any` and return nothing.
+   - Get the `ninja_ids` from the `options` dictionary and filter our ninjas based on the `ids`
+   - Call the `update` method on our filtered queryset and set `graduated_at=timezone.now()`
+   - Write to standard output that the `ninjas` have been successfully graduated.
+
+### Custom Command Bonus
+
+1. Add validation for `ids` that don't exist.
+   - Filter the list of students and check that the list of `ids` retrieved match the list of `ids` inputted
+     - If they do not match, throw a `CommandError`
