@@ -10,7 +10,7 @@ class Village(models.Model):
 
 class Academy(models.Model):
     cover = models.ImageField()
-    village: "Village" = models.OneToOneField(
+    village = models.OneToOneField(
         "ninjas.Village", on_delete=models.CASCADE, related_name="academies"
     )
     curriculum = models.TextField(default="", blank=True)
@@ -21,7 +21,7 @@ class Academy(models.Model):
 
 
 class Cohort(models.Model):
-    academy: "Academy" = models.ForeignKey(
+    academy = models.ForeignKey(
         "ninjas.Academy", on_delete=models.CASCADE, related_name="cohorts"
     )
     start_at = models.DateField()
@@ -41,7 +41,8 @@ class Sensei(models.Model):
 
 class Ninja(models.Model):
     name = models.CharField(max_length=30)
-    graduated = models.DateField(null=True, blank=True)
+    cohorts = models.ManyToManyField("ninjas.Cohort", related_name="ninjas")
+    graduated_at = models.DateField(null=True, blank=True)
 
     def __str__(self) -> str:
         return str(self.name)
